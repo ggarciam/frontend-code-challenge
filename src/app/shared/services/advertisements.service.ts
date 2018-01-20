@@ -44,6 +44,10 @@ export interface Advertisement {
   title: string;
 }
 
+export interface Advertisements {
+  data: Advertisement[];
+}
+
 @Injectable()
 export class AdvertisementsService {
 
@@ -55,8 +59,10 @@ export class AdvertisementsService {
   getAdvertisements(): Observable<Advertisement> {
     // get all the available advertisements
     //
-    return this._http.get(this._globals.url)
-      .map(res => <Advertisement>res)
+    return this._http.get('https://cors-anywhere.herokuapp.com/' + this._globals.url)
+      .map((res: Advertisements) => {
+        return res.data.splice(0, this._globals.number_ads);
+      })
       .catch(this.handleError);
   }
 

@@ -1,4 +1,6 @@
-<div *ngFor="let advertisement of advertisements">
-  <!--<app-property-card [advertisement]="advertisement"></app-property-card>-->
-  <app-property-card></app-property-card>
+<div class="exposes">
+  <div *ngFor="let advertisement of advertisementsData">
+    <app-property-card [advertisement]="advertisement"></app-property-card>
+  </div>
 </div>
+

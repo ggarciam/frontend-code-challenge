@@ -5,5 +5,6 @@
 
 export const environment = {
   production: false,
-  url: 'https://cors-anywhere.herokuapp.com/https://api.mcmakler.de/v1/advertisements'
+  url: 'https://api.mcmakler.de/v1/advertisements',
+  number_ads: 10
 };

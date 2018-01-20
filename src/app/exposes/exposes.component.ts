@@ -8,7 +8,6 @@ import { Advertisement, AdvertisementsService } from '../shared/services/adverti
   encapsulation: ViewEncapsulation.None
 })
 export class ExposesComponent implements OnInit {
-  @Input() advertisements;
 
   public advertisementsData: Advertisement = null;
 

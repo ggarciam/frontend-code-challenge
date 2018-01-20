@@ -1,3 +1,23 @@
-<p>
-  property-card works!
-</p>
+<mat-card class="property-card">
+  <img mat-card-image class="property-card__image"
+       src="{{advertisement.advertisementAssets[0].advertisementThumbnails.inventory_m.url}}"
+       *ngIf="advertisement.advertisementAssets"/>
+  <div class="property-captions">
+    <span class="property-card__label"
+          *ngIf="advertisement.advertisementPrice.sellPrice">Kaufen</span>
+    <span class="property-card__label"
+          *ngIf="!advertisement.advertisementPrice.sellPrice">Mieten</span>
+  </div>
+  <mat-card-content class="property-card__content">
+    <div class="title">{{advertisement.title}}</div>
+    <div class="address">{{advertisement.realestateSummary.address.postalCode}} / {{advertisement.realestateSummary.address.city}}</div>
+    <div class="bottom-content">
+      <div class="price">{{advertisement.advertisementPrice.sellPrice}} €</div>
+      <div class="size-info">
+        <span class="room">{{advertisement.realestateSummary.numberOfRooms}} Zimmer</span>
+        <span class="space">ab {{advertisement.realestateSummary.space | number : '1.2-2'}} m<sup>2</sup>
+        </span>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

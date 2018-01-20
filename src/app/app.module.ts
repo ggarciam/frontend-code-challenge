@@ -8,6 +8,7 @@ import { PropertyCardComponent } from './property-card/property-card.component';
 import { ExposesComponent } from './exposes/exposes.component';
 import { Globals } from './shared/services/globals.service';
 import { AdvertisementsService } from './shared/services/advertisements.service';
+import { AngularMaterialModule } from './app.material-module';
 
 
 
@@ -19,7 +20,8 @@ import { AdvertisementsService } from './shared/services/advertisements.service'
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularMaterialModule
   ],
   providers: [
     Globals,
