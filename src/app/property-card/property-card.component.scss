@@ -1,5 +1,4 @@
 .property-card {
-  width: 360px;
   margin: 0 0 40px 0;
 
   .property-captions {
@@ -21,7 +20,6 @@
   }
 
   .property-card__content {
-    padding: 0 16px;
 
     .title {
       display: -webkit-box;
@@ -43,33 +41,17 @@
     }
 
     .bottom-content {
-      margin: 40px 0;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
       margin: 30px 0;
       line-height: 2em;
       font-size: 14px;
 
       .price {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
         font-size: 16px;
         font-weight: 500;
         color: #222;
       }
 
       .size-info {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: end;
-        -ms-flex-pack: end;
-        justify-content: flex-end;
         -webkit-box-flex: 1;
         -ms-flex: 1;
         flex: 1;
@@ -78,12 +60,12 @@
         font-size: 15px;
 
         .room {
-          padding-right: 18px;
+          padding-right: 10px;
         }
 
         .space {
           border-left: 1px solid #dadada;
-          padding-left: 11px;
+          padding-left: 10px;
           text-align: right;
         }
       }

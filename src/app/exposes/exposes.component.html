@@ -1,5 +1,15 @@
-<div class="exposes">
-  <div *ngFor="let advertisement of advertisementsData">
+<div class="exposes"
+     fxLayout="row"
+     fxLayoutWrap>
+  <div class="placeholder"
+       *ngIf="!advertisementsData">
+    <mat-spinner></mat-spinner>
+  </div>
+  <div *ngFor="let advertisement of advertisementsData"
+       fxFlex="100%"
+       fxFlex.sm="50%"
+       fxFlex.md="50%"
+       fxFlex.lg="33%">
     <app-property-card [advertisement]="advertisement"></app-property-card>
   </div>
 </div>

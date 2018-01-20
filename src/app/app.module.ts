@@ -9,6 +9,7 @@ import { ExposesComponent } from './exposes/exposes.component';
 import { Globals } from './shared/services/globals.service';
 import { AdvertisementsService } from './shared/services/advertisements.service';
 import { AngularMaterialModule } from './app.material-module';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 
@@ -21,7 +22,8 @@ import { AngularMaterialModule } from './app.material-module';
   imports: [
     BrowserModule,
     HttpClientModule,
-    AngularMaterialModule
+    AngularMaterialModule,
+    FlexLayoutModule
   ],
   providers: [
     Globals,
