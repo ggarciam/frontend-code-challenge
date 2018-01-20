@@ -1,5 +1,16 @@
+@import '../shared/styles/variables.styles.scss';
+
 .property-card {
   margin: 0 0 40px 0;
+  cursor: pointer;
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+  transition: all 0.5s ease;
+  font-size: $font-title;
+  font-weight: $font-weight-normal;
+
+  &:hover {
+    box-shadow: 0 3px 10px -2px rgba(0,0,0,.5), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12) !important;
+  }
 
   .property-captions {
     position: absolute;
@@ -9,13 +20,12 @@
       padding: 3px 8px;
       margin: 20px;
       line-height: 25px;
-      background-color: #fff;
-      border: solid 1px #dadada;
+      background-color: $background-color;
+      border: solid 1px $gray-light;
       border-radius: 2px;
-      color: #aaa;
+      color: $gray;
       display: inline-block;
-      font-size: 13px;
-      font-weight: 500;
+      font-size: $font-address;
     }
   }
 
@@ -30,41 +40,37 @@
       -webkit-box-orient: vertical;
       overflow: hidden;
       text-overflow: ellipsis;
-      color: #222;
-      font-size: 16px;
+      color: $gray-darker;
     }
     .address {
       margin-top: 15px;
-      font-size: 13px;
-      font-weight: 500;
-      color: #aaa;
+      font-size: $font-address;
+      color: $gray;
     }
 
     .bottom-content {
       margin: 30px 0;
       line-height: 2em;
-      font-size: 14px;
 
       .price {
-        font-size: 16px;
-        font-weight: 500;
-        color: #222;
+        font-size: $font-title;
+        color: $gray-darker;
       }
 
       .size-info {
         -webkit-box-flex: 1;
         -ms-flex: 1;
         flex: 1;
-        font-weight: 300;
-        color: #333;
-        font-size: 15px;
+        font-weight: $font-weight-thin;
+        color: $gray-dark;
+        font-size: $font-content;
 
         .room {
           padding-right: 10px;
         }
 
         .space {
-          border-left: 1px solid #dadada;
+          border-left: 1px solid $gray-light;
           padding-left: 10px;
           text-align: right;
         }
