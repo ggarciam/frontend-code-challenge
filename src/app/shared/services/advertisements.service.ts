@@ -11,9 +11,6 @@ export interface AdvertisementAsset {
     inventory_m: {
       url: string;
     };
-    thumb_xs: {
-      url: string;
-    };
   };
 }
 
@@ -56,7 +53,7 @@ export class AdvertisementsService {
     private _globals: Globals
   ) {}
 
-  getAdvertisements(): Observable<Advertisement> {
+  getAdvertisements(): Observable<Advertisement[]> {
     // get all the available advertisements
     //
     return this._http.get('https://cors-anywhere.herokuapp.com/' + this._globals.url)

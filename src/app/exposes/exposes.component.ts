@@ -9,7 +9,7 @@ import { Advertisement, AdvertisementsService } from '../shared/services/adverti
 })
 export class ExposesComponent implements OnInit {
 
-  public advertisementsData: Advertisement = null;
+  public advertisementsData: Advertisement[];
 
   constructor(
     private _advertisementsService: AdvertisementsService
@@ -18,9 +18,9 @@ export class ExposesComponent implements OnInit {
   ngOnInit() {
     this._advertisementsService
       .getAdvertisements()
-      .subscribe((data: Advertisement) => {
-        this.advertisementsData = <Advertisement>data;
-        console.log(this.advertisementsData);
+      .subscribe((data: Advertisement[]) => {
+        this.advertisementsData = <Advertisement[]>data;
+        console.log(this.advertisementsData.length);
       });
   }
 
