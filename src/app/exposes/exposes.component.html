@@ -1,9 +1,9 @@
 <div class="exposes"
      fxLayout="row"
      fxLayoutWrap>
-  <div class="placeholder"
-       *ngIf="!advertisementsData">
+  <div class="placeholder" *ngIf="!advertisementsData">
     <mat-spinner></mat-spinner>
+    <span>Suche läuft...</span>
   </div>
   <div *ngFor="let advertisement of advertisementsData"
        fxFlex="100%"
