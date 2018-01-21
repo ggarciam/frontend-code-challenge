@@ -1,4 +1,5 @@
-import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, Input, ViewEncapsulation } from '@angular/core';
+import { Advertisement } from '../shared/services/advertisements.service';
 
 @Component({
   selector: 'app-property-card',
@@ -6,12 +7,8 @@ import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
   styleUrls: ['property-card.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class PropertyCardComponent implements OnInit {
-  @Input() advertisement;
+export class PropertyCardComponent {
+  @Input() private advertisement: Advertisement;
 
   constructor() { }
-
-  ngOnInit() {
-  }
-
 }
