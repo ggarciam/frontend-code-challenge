@@ -1,2 +1,9 @@
 @import 'shared/styles/variables.styles.scss';
 @import 'shared/styles/global.styles.scss';
+
+h1 {
+  font-size: $font-head;
+  font-weight: $font-weight-head;
+  text-align: center;
+  padding: 30px 0;
+}
