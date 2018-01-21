@@ -12,7 +12,12 @@
     <div class="title">{{advertisement.title}}</div>
     <div class="address">{{advertisement.realestateSummary.address.postalCode}} / {{advertisement.realestateSummary.address.city}}</div>
     <div class="bottom-content" fxLayout="row">
-      <div class="price" fxLayout="row">{{advertisement.advertisementPrice.sellPrice}} €</div>
+      <div class="price" fxLayout="row"
+           *ngIf="advertisement.advertisementPrice.sellPrice && advertisement.advertisementPrice.baseRent">
+        {{advertisement.advertisementPrice.sellPrice}} €
+      </div>
+      <div class="price" fxLayout="row"
+           *ngIf="!advertisement.advertisementPrice.sellPrice && advertisement.advertisementPrice.baseRent">{{advertisement.advertisementPrice.baseRent}} €</div>
       <div class="size-info"
            fxLayout="row" fxLayoutAlign="end center">
         <span class="room">{{advertisement.realestateSummary.numberOfRooms}} Zimmer</span>

@@ -1,8 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PropertyCardComponent } from './property-card.component';
-import { Advertisement } from '../shared/services/advertisements.service';
 import { AngularMaterialModule } from '../app.material-module';
 
 @Component({
@@ -40,7 +39,7 @@ class TestComponent {
         }
       }
     }
-  }; //mock your input
+  };
 }
 
 describe('PropertyCardComponent', () => {

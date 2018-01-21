@@ -6,7 +6,7 @@ import { AngularMaterialModule } from '../app.material-module';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { Advertisement, AdvertisementsService } from '../shared/services/advertisements.service';
+import { AdvertisementsService } from '../shared/services/advertisements.service';
 import { Globals } from '../shared/services/globals.service';
 import { PropertyCardComponent } from '../property-card/property-card.component';
 

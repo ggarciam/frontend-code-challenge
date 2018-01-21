@@ -8,7 +8,7 @@ import { Advertisement } from '../shared/services/advertisements.service';
   encapsulation: ViewEncapsulation.None
 })
 export class PropertyCardComponent {
-  @Input() private advertisement: Advertisement;
+  @Input() public advertisement: Advertisement;
 
   constructor() { }
 }

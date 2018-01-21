@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Advertisement, AdvertisementsService } from '../shared/services/advertisements.service';
 
 @Component({
@@ -20,7 +20,6 @@ export class ExposesComponent implements OnInit {
       .getAdvertisements()
       .subscribe((data: Advertisement[]) => {
         this.advertisementsData = <Advertisement[]>data;
-        console.log(this.advertisementsData.length);
       });
   }
 

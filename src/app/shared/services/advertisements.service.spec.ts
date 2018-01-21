@@ -1,7 +1,7 @@
 import { async, TestBed, getTestBed } from '@angular/core/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 
-import { Advertisements, AdvertisementsService } from './advertisements.service';
+import { AdvertisementsService } from './advertisements.service';
 import { Globals } from './globals.service';
 
 describe('AdvertisementsService', () => {
